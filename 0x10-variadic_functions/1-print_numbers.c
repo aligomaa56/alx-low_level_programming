@@ -10,7 +10,7 @@
 
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	int sum = 0;
+	int num;
 	unsigned int i;
 	va_list args;
 
@@ -18,7 +18,8 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	for (i = 0; i < n; i++)
 	{
-		printf("%d", va_arg(args, int));
+		num = va_arg(args, int);
+		printf("%d", num);
 		if (separator != NULL && i < n - 1)
 		{
 			printf("%s", separator);
