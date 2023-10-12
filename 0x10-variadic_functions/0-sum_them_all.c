@@ -3,11 +3,12 @@
  * @n : number of arguments
  * Return: Sum or Zero
 */
+#include "variadic_functions.h"
 
 int sum_them_all(const unsigned int n, ...)
 {
 	int sum = 0;
-	int i;
+	unsigned int i;
 	va_list args;
 
 	va_start(args, n);
